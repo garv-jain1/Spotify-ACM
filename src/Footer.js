@@ -79,9 +79,9 @@ function Footer({ spotify }) {
   return (
     <div className='footer'>
       <div className='footer_left'>
-        <img className='footer_albumLogo'
-           src={item?.album.images[0].url}
-           alt={item?.name}/>
+        { item && item.album && <img className='footer_albumLogo'
+           src={item.album.images[0].url}
+           alt={item.name}/>}
         <div className='footer_songInfo'>
         <h4>No song is playing</h4>
             <p>...</p>
@@ -91,7 +91,7 @@ function Footer({ spotify }) {
       <div className='footer_center'>
         <ShuffleIcon className='footer_green' />
         <SkipPreviousIcon onClick={skipNext} className='footer_icon' />
-        {playing?(<PlayCircleOutlineIcon onClick={handlePlayPause} fontSize="large" className='footer_icon' />):(<PlayCircleOutlineIcon onClick={handlePlayPause} fontSize="large" className='footer_icon' />)}
+        {playing ? (<PlayCircleOutlineIcon onClick={handlePlayPause} fontSize="large" className='footer_icon' />):(<PlayCircleOutlineIcon onClick={handlePlayPause} fontSize="large" className='footer_icon' />)}
         <SkipNextIcon onClick={skipPrevious} className='footer_icon' />
         <RepeatIcon className='footer_green' />
       </div>

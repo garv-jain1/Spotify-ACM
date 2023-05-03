@@ -1,14 +1,14 @@
 import React from 'react'
 import './Header.css';
-import { UseDataLayerValue} from './DataLayer';
+import { UseDataLayerValue } from './DataLayer';
 import SearchIcon from '@mui/icons-material/Search';
 import { Avatar } from '@mui/material';
 import { useEffect } from 'react';
 
 function Header() {
-    const [{user},dispatch]=UseDataLayerValue();
+    const [{ user }, dispatch] = UseDataLayerValue();
 
-    return (
+    return user && (
         <div className='header'>
             <div className='header_left'>
                 <SearchIcon />
@@ -19,8 +19,8 @@ function Header() {
             </div>
 
             <div className='header_right'>
-            <Avatar alt={user?.display_name} src={user?.images[0].url} />
-            <h4>{user?.display_name}</h4>
+                <Avatar alt={user.display_name} src={user.images[0].url} />
+                <h4>{user.display_name}</h4>
             </div>
 
         </div>

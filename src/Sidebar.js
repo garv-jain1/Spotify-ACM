@@ -20,7 +20,7 @@ function Sidebar() {
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
-      {playlists?.items?.map((playlist) => (
+      {playlists && playlists.items && playlists.items.map((playlist) => (
         <SidebarOption option={playlist.name} />
       ))}
     </div>
