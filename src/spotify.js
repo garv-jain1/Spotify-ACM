@@ -2,7 +2,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "e2596121fe174538b09e820f7c082ee7";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://spotify-acm.vercel.app/";
 const scopes = [ //scope(cannot do anything other than this)
   "user-read-currently-playing",
   "user-read-recently-played",
